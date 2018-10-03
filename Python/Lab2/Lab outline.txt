@@ -1,0 +1,18 @@
+﻿Homework2.1 (50pts)
+•Write a program the prompts the user for  number between 1 and 59.
+•Use time to get the current second.
+•Pass the users guess to a function.
+•That function will compare to the current second.  If correct exit the program.
+•If incorrect, give them 5 attempts to guess.
+
+
+Homework2.2 (100pts)
+•Write a program that gets the current time from  the US navy:https://tycho.usno.navy.mil/timer.htmlUseurllib
+•Use a function to get the time.
+•Display the time in MDT, EDT and AKDT.
+•Compare the time in minutes to your local  computer time. If they do not match, print that your local computer time is off.
+
+
+2.2. Extra Credit (10pts)
+•Use try and except block to handle connection errors.
+•If you run the code without an Internet connection, instead of getting a bunch of errors, you should get a print statement like “Connection failed. Please make sure you’re connected to the Internet!”
