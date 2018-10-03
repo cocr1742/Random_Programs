@@ -1,0 +1,32 @@
+#author: Cory Cranford cocr1742@colorado.edu
+#name: HW 3.1
+#purpose: Lists and Dictionaries
+#date: 2018.10.2
+#version:3.1.0
+
+import sys
+import os
+
+def checkFile():
+    if len(sys.argv) != 2:
+        print("ERROR! Must provide a file name argument!")
+        sys.exit()
+    else:
+        if os.path.isfile(sys.argv[1]):
+            printLongestLine(sys.argv[1])
+        else:
+            print("ERROR! That file doesn't seem to exist!")
+            sys.exit()
+
+def printLongestLine(file):
+    longLine = ''
+    longLineLen = 0
+    fh = open(str(file))
+    for line in fh:
+        if len(line) > longLineLen:
+            longLineLen = len(line)
+            longLine = line
+    print("The length of the longest line is: " + str(longLineLen) + ". And the line is: \n")
+    print(longLine)
+
+checkFile()

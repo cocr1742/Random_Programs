@@ -1,0 +1,16 @@
+﻿HW3.1 (40 pts)
+•Write a program that takes a filename as an  argument.
+•If there is no argument, print an error &exit
+•If the file does not exist print an error &exit
+•Read the file file1.txt, print the length of the  longest line and the content
+
+
+HW3.2 (60 pts)
+•Write a program that takes an argument of file2.txt and a sort order (reverse or forward).
+•Read the words from file2 into a list.
+•Sort the list based on the order specified by the user and print a table as output.
+
+
+Extra Credit (30 pts)
+•Write a program that reads data from file2 and creates a list of lists (no sort order needed, follow order in file).
+•The final list should be printed and should look like this:     [[voldemort,cat],[harry,owl],[hermoine,toad],...so on.....]]

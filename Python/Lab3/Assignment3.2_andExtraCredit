@@ -1,0 +1,54 @@
+#author: Cory Cranford cocr1742@colorado.edu
+#name: HW 3.2 and Extra Credit
+#purpose: Lists and Dictionaries
+#date: 2018.10.2
+#version:3.2.0
+
+import sys
+import os
+
+def printPets():
+    if len(sys.argv) != 3:
+        print("ERROR! Must provide a file name argument, and a sort order!")
+        sys.exit()
+    else:
+        if os.path.isfile(sys.argv[1]):
+            printThosePets(sys.argv[1], sys.argv[2])
+        else:
+            print("ERROR! That file doesn't seem to exist!")
+            sys.exit()
+
+def printThosePets(file, order):
+    if order == "reverse":
+        reverse = True
+    elif order == "forward":
+        reverse = False
+    fh = open(str(file))
+    l = []
+    l2 = []
+    for currentLine, line in enumerate(fh):
+        if currentLine == 0:
+            l = line.split()
+            l.sort()
+            if reverse:
+                l.reverse()
+            print (l)
+        elif currentLine == 3:
+            l2 = line.split()
+            l2.sort()
+            if reverse:
+                l2.reverse()
+            print (l2)
+    printTable(l, l2)
+
+def printTable(l, l2):
+    print("-"*42)
+    print("Person Name   Pet Name")
+    extraCredit = []
+    for x in range(0, (len(l)-1)):
+        temp = [l[x], l2[x]]
+        extraCredit.append(temp)
+        print(l[x] + "   " + l2[x])
+    print("For Extra Credit: "+ str(extraCredit))
+
+printPets()
